@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Nota aluno</title>
     <script>
-        var nota = parseInt(prompt("digite a nota "));
+
+        let notas = prompt("Digite a nota do aluno (0 a 10):");
+            nota = parseFloat(notas);
+        
+        if (isNaN(nota)) {
+            alert("Por favor, digite um número válido.");
+        } else if (nota > 10) {
+            alert("Digite uma nota menor ou igual a 10.");
+        } else if (nota < 0) {
+            alert("Digite uma nota maior ou igual a 0.");
+        }
+            
+        while (isNaN(nota) || nota > 10 || nota < 0);
+        
         if (nota >= 7) {
             alert("Aprovado ✅");
         } else if (nota >= 5) {
@@ -15,6 +26,10 @@
         } else {
             alert("Reprovado ❌");
         }
+        
     </script>
+</head>
+<body>
+    
 </body>
 </html>
